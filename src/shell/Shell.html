@@ -1,0 +1,23 @@
+<pip-main class="pip-main">
+	<pip-appbar ng-if="$ctrl.showBar()">
+		<pip-nav-icon pip-appbar-part="icon"></pip-nav-icon>
+		<pip-breadcrumb xxxclass="flex" pip-appbar-part="title:breadcrumb"></pip-breadcrumb>
+		<img pip-appbar-part="logo" src="images/piplife_logo.svg" width="30" />
+		<div class="flex"></div>
+		<pip-search-bar pip-appbar-part="search"></pip-search-bar>
+		<pip-primary-actions class="flex-fixed" pip-appbar-part="actions:primary"></pip-primary-actions>
+		<pip-language-picker class="flex-fixed" languages="languages" pip-appbar-part="actions:language"></pip-language-picker>
+		<pip-secondary-actions class="flex-fixed" pip-appbar-part="menu"></pip-secondary-actions>
+	</pip-appbar>
+
+<div class="layout-row" style="height: 100%;">
+	<pip-sidenav ng-if="$ctrl.showNav()">
+		<pip-nav-header pip-sidenav-part="user">
+		</pip-nav-header>
+		<pip-nav-menu pip-sidenav-part="links">
+		</pip-nav-menu>
+	</pip-sidenav>
+
+	<pip-main-body class="pip-main-body" ui-view></pip-main-body>
+</div>
+</pip-main>
